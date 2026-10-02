@@ -1,5 +1,4 @@
-package com.example.smart_sales_manager;
-
+package com.example.smartsalesmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SmartSalesManagerApplication {
 
     public static void main(String[] args) {
-    	SpringApplication.run(SmartSalesManagerApplication.class, args);
+        SpringApplication.run(SmartSalesManagerApplication.class, args);
     }
 }
