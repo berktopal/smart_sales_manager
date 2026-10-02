@@ -1,4 +1,4 @@
-package com.example.smart_sales_manager;
+package com.example.smartsalesmanager.repository;
 
 import com.example.smartsalesmanager.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;

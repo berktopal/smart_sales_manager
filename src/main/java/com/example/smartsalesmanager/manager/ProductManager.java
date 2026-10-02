@@ -4,13 +4,15 @@ import com.example.smartsalesmanager.model.Product;
 import com.example.smartsalesmanager.observer.StockObserver;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class ProductManager {
 
     private static ProductManager instance;
-    private List<Product> products = new ArrayList<>();
-    private StockObserver stockObserver;
+    private final List<Product> products = new ArrayList<>();
+    private final StockObserver stockObserver;
 
     private ProductManager() {
         this.stockObserver = new StockObserver();
@@ -29,10 +31,12 @@ public class ProductManager {
     }
 
     public void deleteProduct(Long id) {
-        products.removeIf(p -> p.getId().equals(id));
+        // Objects.equals: henüz kaydedilmemiş (id'si null) ürünlerde NullPointerException olmaz
+        products.removeIf(p -> Objects.equals(p.getId(), id));
     }
 
+    // Dışarıya salt-okunur görünüm: liste sadece add/delete ile değişebilir
     public List<Product> getProducts() {
-        return products;
+        return Collections.unmodifiableList(products);
     }
 }

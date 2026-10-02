@@ -1,8 +1,8 @@
-package com.example.smart_sales_manager.controllers;
+package com.example.smartsalesmanager.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-	
+
 @RestController
 public class HelloController {
 
@@ -11,6 +11,3 @@ public class HelloController {
 		return "Hello, Gökçe!";
 	}
 }
-	
-	
-

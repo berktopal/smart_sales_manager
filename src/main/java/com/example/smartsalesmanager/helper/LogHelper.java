@@ -1,4 +1,4 @@
-package helpers;
+package com.example.smartsalesmanager.helper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ public final class LogHelper {
     private static final Logger logger = LoggerFactory.getLogger("SmartSalesLogger");
 
     private LogHelper() {
-        // burayı singleton olsun diye private constructor ile yaptım
+        // Yardımcı (utility) sınıf: örneklenmesin diye private constructor
     }
 
     public static void info(String message) {
